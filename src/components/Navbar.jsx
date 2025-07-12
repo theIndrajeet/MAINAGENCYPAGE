@@ -104,15 +104,19 @@ const NavItem = styled.a`
 `;
 
 const MobileMenuButton = styled.button`
-  display: none;
   background: none;
   border: none;
   color: var(--text-black);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
   
-  @media (max-width: 768px) {
-    display: block;
+  &:hover {
+    transform: scale(1.1);
   }
 `;
 
@@ -176,6 +180,16 @@ const MobileThemeToggle = styled.div`
   margin-top: auto;
 `;
 
+const MobileActions = styled.div`
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -226,9 +240,12 @@ const Navbar = () => {
             </NavActions>
           </NavLinks>
           
-          <MobileMenuButton onClick={() => setMobileMenuOpen(true)}>
-            ☰
-          </MobileMenuButton>
+          <MobileActions>
+            <ThemeToggle />
+            <MobileMenuButton onClick={() => setMobileMenuOpen(true)}>
+              ☰
+            </MobileMenuButton>
+          </MobileActions>
         </NavContent>
       </NavContainer>
       
