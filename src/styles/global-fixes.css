@@ -1,0 +1,207 @@
+/* Global CSS Fixes for Hover States and Spacing */
+
+/* Fix button hover states - ensure text color stays consistent */
+button[class*="ClassicButton"]:hover,
+a[class*="ClassicButton"]:hover {
+  color: var(--bg-cream) !important;
+}
+
+button[class*="OutlinedButton"]:hover,
+a[class*="OutlinedButton"]:hover {
+  color: var(--bg-cream) !important;
+}
+
+/* Fix any link buttons to maintain proper text color on hover */
+a[href*="calendly"]:hover,
+a[target="_blank"]:hover {
+  color: inherit;
+}
+
+/* Fix Theme Toggle spacing in navbar */
+div[class*="NavActions"] > button:first-child {
+  margin-right: 0.75rem;
+}
+
+/* Fix main headline spacing to prevent overlap */
+h1[class*="MainHeadline"] span.line {
+  line-height: 1.2;
+  margin-bottom: 0.15em;
+}
+
+/* Ensure all buttons have proper transition */
+button, a[class*="Button"] {
+  transition: all 0.3s ease;
+}
+
+/* Fix mobile menu button spacing */
+button[class*="MobileMenuButton"] {
+  margin-left: 1rem;
+}
+
+/* Ensure proper spacing for terminal titles */
+.terminal-title {
+  text-align: center;
+  width: 100%;
+}
+
+/* Fix any text overlap in sections */
+section h2, section h3 {
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+/* Ensure proper z-index for floating elements */
+div[class*="FloatingContainer"] {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Fix navbar backdrop on scroll */
+nav[class*="NavContainer"] {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Ensure smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Compact navbar button styles */
+nav a[class*="ClassicButton"] {
+  padding: 0.5rem 1.25rem !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* Reduce mobile menu button size */
+button[class*="MobileMenuButton"] {
+  font-size: 1.25rem !important;
+}
+
+/* Additional navbar height reduction */
+nav[class*="NavContent"] {
+  padding: 0.75rem 2rem !important;
+}
+
+/* Responsive adjustments for more compact header */
+@media (max-width: 1200px) {
+  h1[class*="MainHeadline"] {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  h1[class*="MainHeadline"] {
+    font-size: 2.5rem !important;
+  }
+  
+  div[class*="HeroContent"] {
+    padding-top: 5rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1[class*="MainHeadline"] {
+    font-size: 2rem !important;
+  }
+  
+  h1[class*="MainHeadline"] span.line {
+    margin-bottom: 0.1em;
+  }
+} 
+
+/* Divider margins */
+div[class*="Divider"] {
+  margin: 1.5rem 0 !important;
+} 
+
+/* Fix modal centering issue */
+div[class*="ModalContainer"] {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem;
+}
+
+/* Ensure modal content doesn't inherit unwanted transforms */
+div[class*="ExpandedContentUpdated"] {
+  position: relative !important;
+  transform: none !important;
+}
+
+/* Prevent body scroll when modal is open */
+body:has(div[class*="ModalContainer"]) {
+  overflow: hidden;
+} 
+
+/* Enhance code block visibility */
+pre[class*="language-"] {
+  background: #1e1e1e !important;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Make code colors more vibrant */
+.token.comment {
+  color: #6A9955 !important;
+  opacity: 1 !important;
+}
+
+.token.string {
+  color: #CE9178 !important;
+  text-shadow: 0 0 2px rgba(206, 145, 120, 0.3);
+}
+
+.token.keyword {
+  color: #569CD6 !important;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgba(86, 156, 214, 0.3);
+}
+
+.token.function {
+  color: #DCDCAA !important;
+  text-shadow: 0 0 2px rgba(220, 220, 170, 0.3);
+}
+
+/* Add subtle animation to code lines */
+div[class*="AnimatedCodeBlock"] pre code > span {
+  animation: fadeInLine 0.05s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInLine {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Stagger the animation */
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(1) { animation-delay: 0.1s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(2) { animation-delay: 0.15s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(3) { animation-delay: 0.2s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(4) { animation-delay: 0.25s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(5) { animation-delay: 0.3s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(6) { animation-delay: 0.35s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(7) { animation-delay: 0.4s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(8) { animation-delay: 0.45s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(9) { animation-delay: 0.5s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(10) { animation-delay: 0.55s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(11) { animation-delay: 0.6s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(12) { animation-delay: 0.65s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(13) { animation-delay: 0.7s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(14) { animation-delay: 0.75s; }
+div[class*="AnimatedCodeBlock"] pre code > span:nth-child(15) { animation-delay: 0.8s; }
+
+/* Line number styling */
+.linenumber {
+  color: #858585 !important;
+  opacity: 0.8;
+} 

@@ -1,0 +1,82 @@
+/* Vintage Newspaper Theme */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* Import global fixes */
+@import './styles/global-fixes.css';
+
+:root {
+  /* Vintage Newspaper Colors */
+  --bg-cream: #f5f2ed;
+  --bg-light: #faf9f6;
+  --text-black: #1a1a1a;
+  --text-gray: #4a4a4a;
+  --accent-red: #8B0000;
+  --accent-hover: #6B0000;
+  --border: rgba(26, 26, 26, 0.1);
+  --border-dark: rgba(26, 26, 26, 0.2);
+  --shadow-subtle: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-paper: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --code-bg: #1e1e1e;
+  --code-text: #d4d4d4;
+  
+  /* RGB values for backdrop filters */
+  --bg-cream-rgb: 245, 242, 237;
+}
+
+[data-theme="dark"] {
+  --bg-cream: #1a1a1a;
+  --bg-light: #252525;
+  --text-black: #f5f2ed;
+  --text-gray: #b0b0b0;
+  --accent-red: #ff6b6b;
+  --accent-hover: #ff5252;
+  --border: rgba(245, 242, 237, 0.1);
+  --border-dark: rgba(245, 242, 237, 0.2);
+  --code-bg: #0a0a0a;
+  --bg-cream-rgb: 26, 26, 26;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Crimson Text', Georgia, serif;
+  background-color: var(--bg-cream);
+  color: var(--text-black);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--text-black);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Override any dark theme remnants */
+body * {
+  --bg-dark: var(--bg-cream) !important;
+  --primary: var(--bg-light) !important;
+  --accent: var(--accent-red) !important;
+  --secondary: var(--accent-hover) !important;
+  --text-white: var(--text-black) !important;
+  --text-body: var(--text-dark) !important;
+}
+
+code, pre {
+  font-family: 'IBM Plex Mono', monospace;
+}
