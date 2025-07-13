@@ -18,7 +18,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
             </Routes>
           </AnimatePresence>
-        </div>
+      </div>
       </Router>
     </ThemeProvider>
   );

@@ -229,7 +229,7 @@ const portfolioData = {
     {
       title: "Ask Sarkar",
       type: "RTI Automation",
-      description: "[[memory:2248666]] Intelligent RTI application system with 7-step strategic conversation flow.",
+      description: "Intelligent RTI application system with 7-step strategic conversation flow.",
       url: "https://asksarkar.netlify.app",
       tech: ["React", "Gemini AI", "Firebase"]
     },
@@ -248,7 +248,7 @@ const portfolioData = {
       tech: ["React", "Framer Motion", "SEO"]
     },
     {
-      title: "Lili Thai",
+      title: "Lilith AI",
       type: "India's First Legal AI Assistant",
       description: "Groundbreaking AI assistant specifically trained on Indian legal system and precedents.",
       url: "https://lilithai.netlify.app",
